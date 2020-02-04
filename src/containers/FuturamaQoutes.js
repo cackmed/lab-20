@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Quotes from '../components/Qoutes';
+import Button from '../components/Button';
 import {  getQuotes } from '../services/futuramaApi';
+
 
 export default class FuturamaQoutes extends Component {
     state = {
@@ -16,7 +18,11 @@ export default class FuturamaQoutes extends Component {
     render() {
       const { quotes } = this.state;
       return (
-        <Quotes quotes={quotes}/>
+        <>
+          <Quotes quotes={quotes}/>
+          <Button  text="Grab a new Quote" onClick={this.fetch}/>
+        </>
+
       );
     }
 }
