@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Quotes from '../components/Qoutes';
+import Quotes from '../components/Quotes';
 import Button from '../components/Button';
 import {  getQuotes } from '../services/futuramaApi';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import Proptypes from 'prop-types';
-import Quote from './Qoute'; 
+import Quote from './Quote'; 
 
 const Quotes = ({ quotes }) => {
   const qouteElements = quotes.map(quote => (
