@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Quote = ({ text, name, image }) => (
   <figure>
     <img src={image} alt={name}/>
-    <figcaption>&qout;{text}&qout; --{name}</figcaption> 
+    <figcaption>&quot;{text}&quot; --{name}</figcaption> 
   </figure>
 );
 

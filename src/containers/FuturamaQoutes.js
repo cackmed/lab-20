@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
-import Qoutes from '../components/Qoute';
-import {  getQoutes } from '../services/futuramaApi';
+import Quotes from '../components/Qoutes';
+import {  getQuotes } from '../services/futuramaApi';
 
 export default class FuturamaQoutes extends Component {
     state = {
-      qoute: []
+      quotes: []
     }
     componentDidMount() {
       this.fetch();
     }
     fetch = () => {
-      return getQoutes()
-        .then(qoutes => this.setState({ qoutes }));
+      return getQuotes()
+        .then(quotes => this.setState({ quotes }));
     }
     render() {
-      const { qoutes } = this.state;
+      const { quotes } = this.state;
       return (
-        <Qoutes qoutes={qoutes}/>
+        <Quotes quotes={quotes}/>
       );
     }
 }
