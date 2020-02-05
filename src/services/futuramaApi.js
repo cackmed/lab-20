@@ -6,7 +6,7 @@ export const getQuotes = () => fetch('http://futuramaapi.herokuapp.com/api/quote
     image
   })));
 
-export const getCharacterQuotes = (characterName) => fetch(`http://futuramaapi.herokuapp.com/api/characters/${characterName}/1`)
+export const getCharacterQuotes = (characterName, count) => fetch(`http://futuramaapi.herokuapp.com/api/characters/${characterName}/${count}`)
   .then(res => res.json())
   .then(quotes => quotes.map(({ quote, character, image }) => ({
     text: quote,
