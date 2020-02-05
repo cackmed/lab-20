@@ -1,32 +1,38 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Characters from './Character/Characters';
+
+const characters = [
+  { value: 'bender', name: 'Bender' },
+  { value: 'fry', name: 'Fry' },
+  { value: 'leela', name: 'Bender' },
+  { value: 'professor-farnsworth', name: 'Professor Farnsworth' },
+  { value: 'amy', name: 'Amy' },
+  { value: 'zapp-brannigan', name: 'Zapp-Brannigan' },
+  { value: 'lurr', name: 'Lurr' },
+  { value: 'dr-zoidberg', name: 'Dr Zoidberg' },
+  { value: 'bob-barker', name: 'Bob Barker' },
+  { value: 'hermes', name: 'Hermes' },
+  { value: 'morgan-proctor', name: 'Morgan Proctor' },
+  { value: 'mom', name: 'Mom' },
+  { value: 'robot-mob', name: 'Robot-Mob' },
+  { value: 'giant-bender', name: 'Giant Bender' },
+  { value: 'kif', name: 'Kif' }
+];
+
 
 const CharacterMenu = ({ onChange, onClick }) => (
   <>
-    <select value="test" onChange={onChange}>
-      <option value="bender">Bender</option>
-      <option value="fry">Fry</option>
-      <option value="leela">Leela</option>
-      <option value="professor-farnsworth">Professor Farnsworth</option>
-      <option value="amy">Amy</option>
-      <option value="zapp-brannigan">Zapp Brannigan</option>
-      <option value="lurr">Lurr</option>
-      <option value="dr-zoidberg">Dr Zoidberg</option>
-      <option value="bob-barker">Bob Barker</option>
-      <option value="hermes">Hermes</option>
-      <option value="morgan-proctor">Morgan Proctor</option>
-      <option value="mom">Mom</option>
-      <option value="robot-mob">Robot Mob</option>
-      <option value="giant-bender">Giant Bender</option>
-      <option value="kif">Kif</option>
-      <option value="don-bot">Don Bot</option>
+    <select onChange={onChange}>
+      <Characters characters={characters}/>
     </select>
     <button onClick={onClick}>Get Qoute</button>
   </>
 );
 
 CharacterMenu.propTypes = {
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired
 };
 
 export default CharacterMenu;

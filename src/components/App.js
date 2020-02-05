@@ -1,7 +1,7 @@
 import React from 'react';
-import FuturamaQoutes from '../containers/FuturamaQoutes';
+import FuturamaQuotes from '../containers/FuturamaQuotes';
 
 export default function App() {
-  return <FuturamaQoutes />;
+  return <FuturamaQuotes />;
 }
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Quotes from '../components/Quotes';
 import Button from '../components/Button';
 import CharcterMenu from '../components/CharacterMenu';
-import {  getQuotes, getCharacterQoutes } from '../services/futuramaApi';
+import {  getQuotes, getCharacterQuotes } from '../services/futuramaApi';
 
 
 export default class FuturamaQuotes extends Component {
@@ -21,7 +21,7 @@ export default class FuturamaQuotes extends Component {
         .then(quotes => this.setState({ quotes }));
     }
     fetchCharacterQuote = () => {
-      return getCharacterQoutes(this.state.character)
+      return getCharacterQuotes(this.state.character)
         .then(quotes => this.setState({ quotes }));
     }
     render() {
