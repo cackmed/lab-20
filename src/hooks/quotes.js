@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getQuotes, getCharacterQuotes } from '../services/futuramaApi';
 
-export const useQuotes = () => {
+const useQuotes = () => {
   const [quote, setQuote] = useState([]);
   const [character, setCharacter] = useState('');
   const [numQuotes, setNumQuotes] = useState('1');
@@ -11,12 +11,10 @@ export const useQuotes = () => {
       .then(quotes => setQuote(quotes));
   },
   []);
-  const changeNumber = ({ target }) => {
-    const newNumber = target.value;
+  const changeNumber = newNumber => {
     setNumQuotes(newNumber);
   };
-  const changeCharacter = ({ target }) => {
-    const newCharacter = target.value;
+  const changeCharacter = newCharacter => {
     setCharacter(newCharacter);
   };
   const handleClick = () => {
@@ -30,3 +28,5 @@ export const useQuotes = () => {
 
   return { quote, changeNumber, changeCharacter, handleClick, handleCharacterClick };
 };
+
+export default useQuotes;
